@@ -1,31 +1,14 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Beautiful Tables in R</title>
+    <title>Dez Princípios Básicos  para Melhores Tabelas</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Tom Mock" />
-    <meta name="date" content="2021-11-10" />
+    <meta name="author" content="Por Daniel Amaral" />
+    <meta name="date" content="2021-11-18" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
     <script src="libs/panelset/panelset.js"></script>
-    <meta name="github-repo" content="jthomasmock/tables-latinr"/>
-    <meta name="twitter:title" content="Beautiful tables in R with gt and the grammar of tables"/>
-    <meta name="twitter:description" content="Tables don&#39;t have to be boring, and can be created quickly and efficiently in R with gt!"/>
-    <meta name="twitter:url" content="https://jthomasmock.github.io/tables-latinr"/>
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/jthomasmock/tables-latinr/master/title-card.png"/>
-    <meta name="twitter:image:alt" content="Title slide of &#39;Beautiful Tables in R, gt and the grammar of tables&#39;. A slide deck covering the basics of using gt and gtExtras. It also has a purple door with a stack of boxes stacked askew in front of it."/>
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:creator" content="@thomas_mock"/>
-    <meta name="twitter:site" content="@thomas_mock"/>
-    <meta property="og:title" content="Beautiful tables in R with gt and the grammar of tables"/>
-    <meta property="og:description" content="Tables don&#39;t have to be boring, and can be created quickly and efficiently in R with gt!"/>
-    <meta property="og:url" content="https://jthomasmock.github.io/tables-latinr"/>
-    <meta property="og:image" content="https://raw.githubusercontent.com/jthomasmock/tables-latinr/master/title-card.png"/>
-    <meta property="og:image:alt" content="Title slide of &#39;Beautiful Tables in R, gt and the grammar of tables&#39;. A slide deck covering the basics of using gt and gtExtras. It also has a purple door with a stack of boxes stacked askew in front of it."/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:locale" content="en_US"/>
-    <meta property="article:author" content="Tom Mock"/>
     <link rel="stylesheet" href="css/my-theme.css" type="text/css" />
     <link rel="stylesheet" href="css/my-fonts.css" type="text/css" />
   </head>
@@ -37,118 +20,55 @@
 
 
 
-
-
 class: title-slide, left, top
 
-# &lt;span style='color:#fcab27'&gt;Beautiful Tables in R&lt;/span&gt;
+# &lt;span style='color:#fcab27'&gt;Dez Princípios Básicos&lt;br&gt; para Melhores Tabelas&lt;/span&gt;
 
-## &lt;span style='color:#3686d3'&gt;`gt` and the grammar of tables&lt;/span&gt; &lt;br&gt;
+## 
 
-### &lt;a href = 'https://twitter.com/thomas_mock'&gt;&lt;span style='color:#ff2b4f'&gt;Tom Mock&lt;/span&gt;&lt;/a&gt; <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:25px;width:25px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#ff2b4f;overflow:visible;position:relative;"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+### Por &lt;span style='color:#ff2b4f'&gt;Daniel Amaral&lt;/span&gt; 
 
-### 2021-11-10
-
-&lt;br&gt;
-
-<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg> [jthomasmock.github.io/tables-latinr](https://jthomasmock.github.io/tables-latinr)   
-<svg aria-hidden="true" role="img" viewBox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> [github.com/jthomasmock/tables-latinr](https://github.com/jthomasmock/tables-latinr)  
-
-&lt;span style='color:white;'&gt;Slides released under&lt;/span&gt; [CC-BY 2.0](https://creativecommons.org/licenses/by/2.0/)&amp;nbsp;&amp;nbsp;<svg aria-hidden="true" role="img" viewBox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M245.83 214.87l-33.22 17.28c-9.43-19.58-25.24-19.93-27.46-19.93-22.13 0-33.22 14.61-33.22 43.84 0 23.57 9.21 43.84 33.22 43.84 14.47 0 24.65-7.09 30.57-21.26l30.55 15.5c-6.17 11.51-25.69 38.98-65.1 38.98-22.6 0-73.96-10.32-73.96-77.05 0-58.69 43-77.06 72.63-77.06 30.72-.01 52.7 11.95 65.99 35.86zm143.05 0l-32.78 17.28c-9.5-19.77-25.72-19.93-27.9-19.93-22.14 0-33.22 14.61-33.22 43.84 0 23.55 9.23 43.84 33.22 43.84 14.45 0 24.65-7.09 30.54-21.26l31 15.5c-2.1 3.75-21.39 38.98-65.09 38.98-22.69 0-73.96-9.87-73.96-77.05 0-58.67 42.97-77.06 72.63-77.06 30.71-.01 52.58 11.95 65.56 35.86zM247.56 8.05C104.74 8.05 0 123.11 0 256.05c0 138.49 113.6 248 247.56 248 129.93 0 248.44-100.87 248.44-248 0-137.87-106.62-248-248.44-248zm.87 450.81c-112.54 0-203.7-93.04-203.7-202.81 0-105.42 85.43-203.27 203.72-203.27 112.53 0 202.82 89.46 202.82 203.26-.01 121.69-99.68 202.82-202.84 202.82z"/></svg><svg aria-hidden="true" role="img" viewBox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M314.9 194.4v101.4h-28.3v120.5h-77.1V295.9h-28.3V194.4c0-4.4 1.6-8.2 4.6-11.3 3.1-3.1 6.9-4.7 11.3-4.7H299c4.1 0 7.8 1.6 11.1 4.7 3.1 3.2 4.8 6.9 4.8 11.3zm-101.5-63.7c0-23.3 11.5-35 34.5-35s34.5 11.7 34.5 35c0 23-11.5 34.5-34.5 34.5s-34.5-11.5-34.5-34.5zM247.6 8C389.4 8 496 118.1 496 256c0 147.1-118.5 248-248.4 248C113.6 504 0 394.5 0 256 0 123.1 104.7 8 247.6 8zm.8 44.7C130.2 52.7 44.7 150.6 44.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3z"/></svg> ]   
+### 2021-11-18
 
 &lt;div style = "position: absolute;top: 0px;right: 0;"&gt;&lt;img src="https://images.unsplash.com/photo-1570554886111-e80fcca6a029?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1587&amp;q=80" alt="A purple door with a stack of boxes stacked askew, falling to the left" width="460"&gt;&lt;/img&gt;&lt;/div&gt;
 
 ---
+class: middle
 
-layout: true
-
-&lt;div class="my-footer"&gt;&lt;span&gt;jthomasmock.github.io/tables-latinr&lt;/span&gt;&lt;/div&gt;
-
----
-class:center
-
-# Why do we care about tables?
+# Por que nos preocupamos com tabelas?
 
 ---
-class: center
+class: middle
 
-### *Why do we care about tables?*
+### *Por que nos preocupamos com tabelas?*
 
-# Why do we care about graphs?  
-
----
-class: center
-
-### *Why do we care about tables?*  
-
-### *Why do we care about graphs?*  
-
-# *Both* Graphs AND Tables *are* tools for communication
-
+# Por que nos preocupamos com gráficos? 
 
 ---
-class: center
+class: middle
 
-### *Why do we care about tables?*
+### *Por que nos preocupamos com tabelas?*  
 
-### *Why do we care about graphs?*
+### *Por que nos preocupamos com gráficos?*  
 
-### *Both Graphs and tables are tools for communication*
+# Gráficos e Tabelas são ferramentas de **comunicação**
 
-# Better Graphs/Tables *are* better communication
+---
+class: middle
+
+### *Por que nos preocupamos com tabelas?*  
+
+### *Por que nos preocupamos com gráficos?*  
+
+### *Gráficos e Tabelas são ferramentas de comunicação*
+
+# Melhores gráficos/tabelas geram **melhor comunicação**
 
 ---
 
-### A **grammar** of graphics
+### A **Grámatica** das Tabelas
 
-* `ggplot2` is an application of the **grammar of graphics** for R  
-
---
-
-* A default dataset and set of mappings from variables to aesthetics  
-
-* One or more layers of geometric objects    
-
-* One scale for each aesthetic mapping used  
-
-* A coordinate system  
-
-* The facet specification  
-
----
-
-### A **grammar** of graphics
-
---
-
-.pull-left[
-Easy enough to [*rapidly prototype*](https://johnburnmurdoch.github.io/slides/r-ggplot/#/14) graphics at the "speed of thought"  
-&lt;img src="https://johnburnmurdoch.github.io/slides/r-ggplot/football-tide-2.png" width="75%" style="display: block; margin: auto;" /&gt;
-
-Images from John-Burn Murdoch's presentation: [**ggplot2 as a creativity engine**](https://johnburnmurdoch.github.io/slides/r-ggplot/#/)  
-
-]
-
---
-
-.pull-right[
-Powerful enough for [*final "publication"*](https://johnburnmurdoch.github.io/slides/r-ggplot/#/34)  
-&lt;img src="http://blogs.ft.com/ftdata/files/2016/03/eng.png" width="75%" style="display: block; margin: auto;" /&gt;
-
-
-]
-
----
-
-### A **grammar** of tables
-
---
-
-Construct a wide variety of useful tables with a cohesive set of table parts. These include the *table header*, the *stub*, the *column labels* and *spanner column labels*, the *table body* and the *table footer*.
-
---
-
-&lt;img src="https://gt.rstudio.com/reference/figures/gt_parts_of_a_table.svg" title="The parts of a gt table diagram. Outlines the title, subtitle, header, stubhead, stub, column labels, table body, and the table footer." alt="The parts of a gt table diagram. Outlines the title, subtitle, header, stubhead, stub, column labels, table body, and the table footer." width="70%" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://gt.rstudio.com/reference/figures/gt_parts_of_a_table.svg" width="70%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -156,7 +76,7 @@ Construct a wide variety of useful tables with a cohesive set of table parts. Th
 
 --
 .pull-left[
-Easy enough to *rapidly prototype*  
+*Prototipagem rápida*
 <table style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif; display: table; border-collapse: collapse; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;">
   
   <thead style="border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -203,845 +123,318 @@ Easy enough to *rapidly prototype*
   
   
 </table>
-
 ]
 
 --
 
 .pull-right[
-Powerful enough for [*final "publication"*](https://johnburnmurdoch.github.io/slides/r-ggplot/#/34)  
+Tabela Final [*pronta para publicação*](https://johnburnmurdoch.github.io/slides/r-ggplot/#/34)  
 
 
 &lt;iframe id="publicationQuality" src="tables/publication-quality.html" width="600" height="300"  frameborder="0"&gt;
 ]
 
 ---
+# Casos de Uso
 
 
 
 &lt;iframe id="fewTable" src="tables/few-table-rule.html" width="1000" height="1000"  frameborder="0"&gt;
 
 ---
+# Alguns Exemplos
 
 
 
-&lt;iframe id="fewTableEx" src="tables/few-table-ex.html" width="1000" height="750"  frameborder="0" style="-webkit-transform:scale(0.75);-moz-transform-scale(0.75);position:absolute;top:0px;"&gt;
-
----
-
-### Basic `gt` table
-
-
-
-
-
-.pull-left[
-
-```r
-yield_data_wide %&gt;% 
-  gt()
-```
-
-]
-
---
-
-.pull-right[
-
-&lt;iframe id="basicTable" src="tables/basic-table.html" width="450" height="600"  frameborder="0"&gt;
-
-]
-
----
-
-### Add groups
-
-.pull-left[
-
-```r
-yield_data_wide %&gt;% 
-  head() %&gt;% 
-  # respects grouping from dplyr
-* group_by(Country) %&gt;%
-  gt(rowname_col = "crop") 
-```
-
-]
-
----
-
-### Add groups
-
-.pull-left[
-
-```r
-yield_data_wide %&gt;% 
-  head() %&gt;% 
-  # respects grouping from dplyr
-* group_by(Country) %&gt;%
-  gt(rowname_col = "crop") 
-```
-
-
-```r
-yield_data_wide %&gt;% 
-  head() %&gt;%
-  gt(
-*   groupname_col = "crop",
-*   rowname_col = "Country"
-  ) 
-```
-
-]
-
-
---
-
-.pull-right[
-
-
-&lt;iframe id="groupTab" src="tables/group-tab.html" width="450" height="600"  frameborder="0"&gt;
-
-
-]
-
-
----
-
-
-
-.pull-left[
-### Groups
-
-
-```r
-yield_data_wide %&gt;% 
-  mutate(crop = str_to_title(crop)) %&gt;% 
-  group_by(crop) %&gt;% 
-  gt(
-    rowname_col = "Country"
-  ) %&gt;% 
-  fmt_number(
-    columns = 2:5, # reference cols by pos
-    decimals = 2 # decrease decimal places
-    ) %&gt;% 
-* summary_rows(
-*   groups = TRUE,
-    # reference cols by name
-    columns = c(`2014`, `2015`, `2016`), 
-    fns = list(
-      # add summary stats
-*     avg = ~mean(.),
-*     sd = ~sd(.)
-    )
-  )
-```
-
-]
-
---
-
-.pull-right[
-
-&lt;iframe id="groupSum" src="tables/groupSum.html" width="450" height="600"  frameborder="0"&gt;
-
-]
-
----
-
-### Add spanners
-
-Table spanners can be added quickly with `tab_spanner()` and again use either position (column number) or + `c(name)`.
-
-.pull-left[
-
-```r
-yield_data_wide %&gt;% 
-  head() %&gt;%
-  gt(
-    groupname_col = "crop",
-    rowname_col = "Country"
-  ) %&gt;% 
-* tab_spanner(
-*   label = "Yield in Tonnes/Hectare",
-*   columns = 2:5
-    ) 
-```
-
-]
-
---
-
-.pull-right[
-&lt;iframe id="tabSpanner" src="tables/tab-spanner.html" width="450" height="600"  frameborder="0"&gt;
-
-]
-
----
-
-### Add notes and titles
-
-Footnotes can be added with `tab_footnote()`. Note that this is our first use of the `locations` argument. Locations is used with things like `cells_column_labels()` or `cells_body()`, `cells_summary()` to offer very tight control of where to place certain changes. 
-
-.pull-left[
-
-```r
-yield_data_wide %&gt;% 
-  head() %&gt;%
-  gt(
-    groupname_col = "crop",
-    rowname_col = "Country"
-  ) %&gt;% 
-  tab_footnote(
-    footnote = "Yield in Tonnes/Hectare", 
-*   locations = cells_column_labels(
-      columns = 1:3
-      )
-    )
-```
-
-]
-
---
-
-.pull-right[
-&lt;iframe id="notesTitles" src="tables/notes-titles.html" width="450" height="600"  frameborder="0"&gt;
-
-]
-
----
-
-### Add notes and titles
-
-Footnotes can be added with `tab_footnote()`. Note that this is our first use of the `locations` argument. Locations is used with things like `cells_column_labels()` or `cells_body()`, `cells_summary()` to offer very tight control of where to place certain changes. 
-
-.pull-left[
-
-```r
-yield_data_wide %&gt;% 
-  head() %&gt;%
-  gt(
-    groupname_col = "crop",
-    rowname_col = "Country"
-  ) %&gt;% 
-  tab_footnote(
-    footnote = "Yield in Tonnes/Hectare", 
-    locations = cells_column_labels(
-      columns = 1:3 # note
-      )
-    ) %&gt;% 
-  # Adding a `source_note()`
-  tab_source_note(
-*   source_note = "Data: OurWorldInData"
-    )
-```
-
-]
-
---
-
-.pull-right[
-&lt;iframe id="notesSource" src="tables/notes-source.html" width="450" height="600"  frameborder="0"&gt;
-
-]
-
-
----
-
-### Add Title/Subtitle
-
-Adding a title or subtitle with `tab_header()` and notice that I used `md()` around the title and `html()` around subtitle to adjust their appearance. 
-
-.pull-left[
-
-```r
-yield_data_wide %&gt;% 
-  head() %&gt;%
-  gt(
-    groupname_col = "crop",
-    rowname_col = "Country"
-  ) %&gt;%
-* tab_header(
-    title = md("**Crop Yields between 2014 and 2016**"),
-    subtitle = html("&lt;em&gt;Countries limited to Asia&lt;/em&gt;")
-  )
-```
-
-]
-
---
-
-.pull-right[
-&lt;iframe id="titleSubtitle" src="tables/title-subtitle.html" width="450" height="600"  frameborder="0"&gt;
-
-]
-
----
-
-### Adjust appearance
-
-You can customize large chunks of the table appearance all at once via `tab_options()`. The full reference to ALL the options you can customize are in the [`gt` packagedown site](https://gt.rstudio.com/reference/tab_options.html).
-
-.pull-left[
-
-```r
-yield_data_wide %&gt;% 
-  head() %&gt;%
-  gt(
-    groupname_col = "crop",
-    rowname_col = "Country"
-  ) %&gt;%
-  tab_header(
-    title = "Crop Yields between 2014 and 2016",
-    subtitle = "Countries limited to Asia"
-  ) %&gt;% 
-* tab_options(
-    heading.subtitle.font.size = 12,
-    heading.align = "left",
-    table.border.top.color = "red",
-    column_labels.border.bottom.color = "red",
-    column_labels.border.bottom.width= px(3)
-  )
-```
-
-]
-
---
-
-.pull-right[
-&lt;iframe id="adjustAppearance" src="tables/adjust-appearance.html" width="450" height="600"  frameborder="0"&gt;
-
-]
-
----
-
-### Pseudo-themes
-
-Because `gt` is built up by a series of piped examples, you can also pass along additional changes/customization as a function almost like a `ggplot2` theme!
-
-.pull-left[
-
-```r
-my_theme &lt;- function(data) {
-  tab_options(
-    data = data,
-    heading.subtitle.font.size = 12,
-    heading.align = "left",
-    table.border.top.color = "red",
-    column_labels.border.bottom.color = "red",
-    column_labels.border.bottom.width= px(3)
-  )
-}
-yield_data_wide %&gt;% 
-  head() %&gt;%
-  gt(
-    groupname_col = "crop",
-    rowname_col = "Country"
-  ) %&gt;%
-  tab_header(
-    title = "Crop Yields between 2014 and 2016",
-    subtitle = "Countries limited to Asia"
-  ) %&gt;% 
-* my_theme()
-```
-]
-
---
-
-.pull-right[
-&lt;iframe id="themeTab" src="tables/theme-tab.html" width="450" height="600"  frameborder="0"&gt;
-
-]
-
----
-
-### Style specific cells w/ `tab_style()`
-
-.pull-left[
-.small[
-
-
-```r
-yield_data_wide %&gt;% 
-  head() %&gt;%
-  gt() %&gt;% 
-  tab_style(
-    style = list(
-      cell_text(weight = "bold")
-    ),
-    locations = cells_column_labels(everything())
-  ) %&gt;% 
-* tab_style(
-    style = list(
-*     cell_fill(color = "black", alpha = 0.2),
-*     cell_borders(
-        side = c("left", "right"), 
-        color = "black",
-        weight = px(2)
-        )
-      ),
-    locations = cells_body(
-      columns = crop
-      )
-  ) %&gt;% 
-  tab_style(
-    style = list(
-*     cell_text(color = "red", style = "italic")
-    ),
-    locations = cells_body(
-      columns = 3:5,
-*     rows = Country == "China"
-    )
-  )
-```
-
-]
-
-]
-
---
-
-.pull-right[
-&lt;iframe id="tabSpanner" src="tables/tab-style.html" width="450" height="600"  frameborder="0"&gt;
-
-]
-
----
-
-### Color Gradient
-
-
-.pull-left[
-
-```r
-my_pal &lt;- scales::col_numeric(
-  paletteer::paletteer_d(
-    palette = "ggsci::red_material"
-    ) %&gt;% as.character(),
-  domain = NULL
-  )
-  
-yield_data_wide %&gt;% 
-  head() %&gt;%
-  gt(
-    groupname_col = "crop",
-    rowname_col = "Country"
-  ) %&gt;% 
-* data_color(
-    columns = c(`2014`, `2015`, `2016`),
-*   colors = my_pal
-      )
-```
-
-]
-
---
-
-.pull-right[
-&lt;iframe id="colorGradient" src="tables/color-gradient.html" width="450" height="600"  frameborder="0"&gt;
-
-]
+&lt;iframe id="fewTableEx" src="tables/few-table-ex.html" width="1000" height="650"  frameborder="0" style="-webkit-transform:scale(0.75);-moz-transform-scale(0.75);position:absolute;top:70px;"&gt;
 
 ---
 
 class: inverse, center, middle
 
-# 10 Guidelines with `gt`
+# 10 Princípios Básicos para Melhores Tabelas
 
 ---
 
-### Original Credit
+### Créditos
 
-&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="en" dir="ltr"&gt;I recently published &amp;quot;Ten Guidelines for Better Tables&amp;quot; in the Journal of Benefit Cost Analysis (&lt;a href="https://twitter.com/benefitcost?ref_src=twsrc%5Etfw"&gt;@benefitcost&lt;/a&gt;) on ways to improve your data tables. &lt;br&gt;&lt;br&gt;Here&amp;#39;s a thread summarizing the 10 guidelines. &lt;br&gt;&lt;br&gt;Full paper is here: &lt;a href="https://t.co/VSGYnfg7iP"&gt;https://t.co/VSGYnfg7iP&lt;/a&gt; &lt;a href="https://t.co/W6qbsktioL"&gt;pic.twitter.com/W6qbsktioL&lt;/a&gt;&lt;/p&gt;&amp;mdash; Jon Schwabish (@jschwabish) &lt;a href="https://twitter.com/jschwabish/status/1290323581881266177?ref_src=twsrc%5Etfw"&gt;August 3, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+<blockquote class="twitter-tweet" data-width="550" data-lang="en" data-dnt="true" data-theme="light"><p lang="en" dir="ltr">I recently published &quot;Ten Guidelines for Better Tables&quot; in the Journal of Benefit Cost Analysis (<a href="https://twitter.com/benefitcost?ref_src=twsrc%5Etfw">@benefitcost</a>) on ways to improve your data tables. <br><br>Here&#39;s a thread summarizing the 10 guidelines. <br><br>Full paper is here: <a href="https://t.co/VSGYnfg7iP">https://t.co/VSGYnfg7iP</a> <a href="https://t.co/W6qbsktioL">pic.twitter.com/W6qbsktioL</a></p>&mdash; Jon Schwabish (@jschwabish) <a href="https://twitter.com/jschwabish/status/1290323581881266177?ref_src=twsrc%5Etfw">August 3, 2020</a></blockquote>
 
 
 ---
 
-### Rule 1: Offset the Heads from the Body
+### Créditos
 
-.pull-left[
+<blockquote class="twitter-tweet" data-width="550" data-lang="en" data-dnt="true" data-theme="light"><p lang="en" dir="ltr">Honored to present an invited talk for the amazing <a href="https://twitter.com/LatinR_Conf?ref_src=twsrc%5Etfw">@LatinR_Conf</a> <a href="https://twitter.com/hashtag/LatinR2021?src=hash&amp;ref_src=twsrc%5Etfw">#LatinR2021</a> !<br><br>&#39;Beautiful Tables in R&#39; Slides w/ <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> code: <a href="https://t.co/PiPjiFM1ui">https://t.co/PiPjiFM1ui</a><br><br>Also, don&#39;t forget about the RStudio Table content - ending in just a few days!</p>&mdash; Tom Mock 💉💉🎉 (@thomas_mock) <a href="https://twitter.com/thomas_mock/status/1458814581900517378?ref_src=twsrc%5Etfw">November 11, 2021</a></blockquote>
+
+
+---
+
+### Princípio 1: Separe o Cabeçalho do Corpo da Tabela
+
+.center[
 &lt;iframe id="potato-tab" src="tables/potato-tab.html" width="450" height="600"  frameborder="0"&gt;
-
 ]
 
 ---
 
-### Rule 1: Offset the Heads from the Body
+### Princípio 1: Separe o Cabeçalho do Corpo da Tabela
 
-.pull-left[
+.center[
 &lt;iframe id="potato-tab" src="tables/hot-potato.html" width="450" height="600"  frameborder="0"&gt;
-
 ]
 
 ---
 
-### Rule 2: Use Subtle Dividers Rather Than Heavy Gridlines
+### Princípio 2: Use divisórias sutis em vez de linhas de grade pesadas
 
-The idea here is that you want to clearly indicate dividers when necessary. 
-Especially with many column labels, you want to make sure that changes in the structure are clear.
-
-
----
-
-### Rule 2: Use Subtle Dividers Rather Than Heavy Gridlines
-
+.center[
 &lt;iframe id="potato-tab" src="tables/rule2-bad.html" width="1000" height="600"  frameborder="0"&gt;
+]
 
 ---
 
-### Rule 2: Use Subtle Dividers Rather Than Heavy Gridlines
+### Princípio 2: Use divisórias sutis em vez de linhas de grade pesadas
 
+.center[
 &lt;iframe id="potato-tab" src="tables/rule2-good.html" width="1000" height="600"  frameborder="0"&gt;
+]
 
 ---
 
-### Rule 3: Right-Align Numbers and Heads
+### Princípio 3: Alinhe Números à Direita
 
-In this case, you want to right align numbers and ideally choose mono-spaced or numerically-aligned fonts, while avoiding "oldstyle" fonts which have numbers with varying vertical placement. 
+Nesse caso, alinhamos os números à direita e, de preferência, escolhemos fontes mono-espaçadas ou alinhadas numericamente, evitando fontes "antigas" que têm números com posicionamento horizontal variável. 
 
---
-
-Importantly, `gt` already automatically follows best practices for the most part so we have to change some of the defaults to get **bad** examples.
 
 ---
 
-### 3. Comparison of alignment
+### 3. Comparando os Alinhamentos
 
-Notice that left-alignment or center-alignment of numbers impairs the ability to clearly compare numbers and decimal places. Right-alignment lets you align decimal places and numbers for easy parsing.
-
+.center[
 &lt;iframe id="potato-tab" src="tables/rule3-align.html" width="1000" height="600"  frameborder="0"&gt;
+]
 
 ---
 
-### 3. Addendums to Alignment
+### 3. Adendos ao Alinhamento
 
-When aligning text of equal length (long or very short), center alignment of text can be fine or even preferable. For example, very short text with a long header can be better suited to center-align. Equal length text can be centered without negatively affecting the ability to quickly read.
+Ao alinhar texto de comprimento igual (longo ou muito curto), o alinhamento central do texto pode ser preciso ou até preferível. Por exemplo, um texto muito curto com um cabeçalho longo pode ser mais adequado para alinhamento ao centro. Texto de comprimento igual pode ser centralizado sem afetar negativamente a capacidade de leitura rápida.
 
-.pull-left[
+.center[
 &lt;iframe id="rule3AddBad" src="tables/rule3-add-bad.html" width="450" height="600"  frameborder="0"&gt;
-
 ]
 
---
+---
+### 3. Adendos ao Alinhamento
 
-.pull-right[
-&lt;iframe id="rule3AddBad" src="tables/rule3-add-good.html" width="450" height="600"  frameborder="0"&gt;
+Ao alinhar texto de comprimento igual (longo ou muito curto), o alinhamento central do texto pode ser preciso ou até preferível. Por exemplo, um texto muito curto com um cabeçalho longo pode ser mais adequado para alinhamento ao centro. Texto de comprimento igual pode ser centralizado sem afetar negativamente a capacidade de leitura rápida.
 
+.center[
+&lt;iframe id="rule3AddGood" src="tables/rule3-add-good.html" width="450" height="600"  frameborder="0"&gt;
 ]
 
 ---
 
-### 3. Addendums to Alignment
+### 3. Escolha Cuidadosamente as Fontes do Texto
 
-When aligning text of equal length (long or very short), center alignment of text can be fine or even preferable. For example, very short text with a long header can be better suited to center-align. Equal length text can be centered without negatively affecting the ability to quickly read.
-
-.pull-left[
-&lt;iframe id="rule3AddBad" src="tables/rule3-add-good.html" width="450" height="600"  frameborder="0"&gt;
-
-]
-
----
-
-### 3. Choose fonts carefully
-
-For the fonts below, notice that the Default for `gt` along with a monospaced font in `Fira Mono` have nice alignment of decimal places and equally-spaced numbers.
-
---
-
+.center[
 &lt;iframe id="fontTab" src="tables/font-tab.html" width="450" height="600"  frameborder="0"&gt;
+]
 
 ---
 
-### Rule 4: Left-align Text and Heads
+### Princípio 4: Alinhe Textos à Esquerda
 
-For labels/strings it is typically more appropriate to left-align. This allows your eye to follow both short and long text vertically to scan a table, along with a clear border.
+Para textos/frases, é normalmente mais apropriado alinhar à esquerda. Isso permite que seus olhos facilmente acompanhem o texto curto e longo verticalmente.
 
---
-
+.center[
 &lt;iframe id="alignTabHeads" src="tables/rule4-tab.html" width="950" height="600"  frameborder="0"&gt;
+]
 
 ---
 
-### Rule 5: Select the Appropriate Level of Precision
+### Princípio 5: Selecione o Nível Apropriado de Precisão nos Números
 
-While you can sometimes justify increased decimal places, often 1 or 2 is enough. Use the various `gt::fmt_number()` functions!
+Embora às vezes você possa justificar o aumento de casas decimais, geralmente 1 ou 2 é o suficiente.
 
+.center[
 &lt;iframe id="precision" src="tables/rule5-tab.html" width="950" height="600"  frameborder="0"&gt;
+]
 
 ---
 
-### Rule 6: Guide Your Reader with Space
+### Princípio 6: Guie seu Leitor com Espaços
 
-Think of how you want to guide the reader - vertically or horizontally. 
+Pense em como você deseja guiar o leitor - vertical ou horizontalmente.
 
+.center[
 &lt;iframe id="spaceTall" src="tables/rule6-tall.html" width="950" height="600"  frameborder="0"&gt;
+]
 
 ---
 
-### Rule 6: Guide Your Reader with Space
+### Princípio 6: Guie seu Leitor com Espaços
 
-Think of how you want to guide the reader - vertically or horizontally. 
+Pense em como você deseja guiar o leitor - vertical ou horizontalmente.
 
+.center[
 &lt;iframe id="spaceWide" src="tables/rule6-wide.html" width="950" height="600"  frameborder="0"&gt;
+]
 
 ---
 
-### Rule 7: Remove Unit Repetition
+### Princípio 7: Evite a Repetição de Unidade
 
+.center[
 &lt;iframe id="repUnits" src="tables/rep-units.html" width="950" height="600"  frameborder="0"&gt;
+]
 
 ---
 
-### Rule 7: Remove Unit Repetition
+### Princípio 7: Evite a Repetição de Unidade
 
-You can use `gtExtras::fmt_symbol_first()` to apply units to only the first row.
+Você pode aplicar o símbolo da unidade apenas na primeira linha, por exemplo.
 
+.center[
 &lt;iframe id="repUnits" src="tables/units.html" width="950" height="600"  frameborder="0"&gt;
+]
 
 ---
 
-### Rule 8: Highlight Outliers  
+### Princípio 8: Destaque Outliers  
 
-With large data tables, it can be useful to take a page from our Data Viz and highlight outliers with color or shape.
+Com grandes tabelas de dados, pode ser útil destacar outliers com cor ou forma.
 
+.center[
 &lt;iframe id="highlightOut" src="tables/highlight-out.html" width="1000" height="600"  frameborder="0"&gt;
+]
 
 ---
 
-### Rule 8: Highlight Outliers
+### Princípio 8: Destaque Outliers  
 
-With a bit of color added we can clearly focus on the outliers.
+Com um pouco de cor, podemos nos concentrar claramente nos outliers.
 
+.center[
 &lt;iframe id="highlightColor" src="tables/rule8-color.html" width="1000" height="600"  frameborder="0"&gt;
+]
 
 ---
 
-### Rule 8: Highlight Outliers
+### Princípio 8: Destaque Outliers  
 
-We can *really* pull the focus with background **fill** of each cell *outlier*.
+Podemos também utilizar um fundo preenchido em cada célula discrepante.
 
+.center[
 &lt;iframe id="highlightFill" src="tables/rule8-fill.html" width="1000" height="600"  frameborder="0"&gt;
+]
+---
+
+### Princípio 9: Agrupe Dados Similares e Aumente o Espaçamento
+
+Aqui, agrupamos categorias semelhantes para facilitar a análise da tabela.
+
+Também podemos aumentar o espaço em branco ou até mesmo remover repetições para aumentar a proporção de dados *vs* tinta.
 
 ---
 
-### Rule 9: Group Similar Data and Increase White Space
+### 9. Mal Exemplo
 
-In this rule, you want to make sure to group similar categories to make parsing the table easier. 
-
-We can also increase white space, or even remove repeats to increase the data-to-ink ratio.
----
-
-### 9. Bad Example
-
+.center[
 &lt;iframe id="rule9Bad" src="tables/rule9-bad.html" width="1000" height="1000"  frameborder="0"&gt;
+]
 
 ---
 
-### 9. `gt` native grouping
+### 9. Bom Exemplo
 
-`gt` provides row group levels that we can use to separate by Country.
-
+.center[
 &lt;iframe id="rule9Good" src="tables/rule9-grp.html" width="1000" height="1000"  frameborder="0"&gt;
-
----
-
-### Rule 10: Add visualizations When Appropriate
-
-While data viz and tables are different tools, you can combine them in clever ways to further engage the reader. Embedded data viz can reveal trends, while the table itself shows the raw data for lookup.
-
---
-
-Turn basic bar charts into detailed tables
-
---
-
-Turn "spaghetti plots" of basic time series into many small multiples with additional details
-
---
-
-Turn targets and values into compact "bullet charts"
-
---
-
-Plot distributions with density plots, histograms, confidence intervals, or measures of central tendency, along with other data
-
----
-
-### Here comes `gtExtras`
-
-`gtExtras` provides additional easy to use features on top of the `gt` R package. Technically, everything is _just_ `gt` code behind the scenes, along with some custom HTML.
-
-
-```r
-remotes::install_github("jthomasmock/gtExtras")
-```
-
-Documentation at: [jthomasmock.github.io/gtExtras/](https://jthomasmock.github.io/gtExtras/index.html)
-
---
-
-While `gtExtras` can do a _LOT_ more than just inline plots, I'll focus on those features for today.
-
-
----
-
-### 10. Sparklines - Trends across Time
-
-.pull-left[
-
-
-```r
-small_yield %&gt;% 
-  group_by(Country) %&gt;% 
-  summarise(`2013` = yield[year == 2013],
-            `2017` = yield[year == 2017],
-*           Trend = list(yield)) %&gt;%
-  gt() %&gt;% 
-  tab_spanner(html("Potato Yield in&lt;br&gt;Tonnes/Hectare"), 2:4) %&gt;% 
-* gtExtras::gt_sparkline(Trend) %&gt;%
-* gtExtras::gt_theme_guardian()
-```
-
 ]
 
---
+---
 
+### Princípio 10: Adicione Visualizações quando Apropriado
+
+Embora a visualização de dados e as tabelas sejam ferramentas diferentes, você pode combiná-las de maneiras inteligentes para envolver ainda mais o leitor. A visualização de dados incorporados pode revelar tendências, enquanto a própria tabela mostra os dados brutos para consulta.
+
+
+---
+
+### 10. *Sparklines* - Tendências ao longo do tempo
+
+.center[
 &lt;iframe id="tabSpark" src="tables/spark-tab.html" width="450" height="600"  frameborder="0"&gt;
+]
 
 ---
 
-### 10. Sparklines - Distributions with Density
+### 10. *Sparklines* - Distribuições com densidade
 
-.pull-left[
-
-```r
-fake_df &lt;- gtExtras::generate_df(
-  n = 100, n_grps = 5, 
-  mean = sample(10:50, size = 5),
-  sd = sample(5:20, size = 5), 
-  with_seed = 37)
-
-fake_df %&gt;% 
-  group_by(grp) %&gt;% 
-  summarise(mean = mean(values),
-*           data = list(values)) %&gt;%
-  arrange(desc(mean)) %&gt;% 
-  gt() %&gt;% 
-* gtExtras::gt_sparkline(column = data,
-*                        type = "density")
-```
-
-
-]
-
---
-
-.pull-right[
+.center[
 &lt;iframe id="gtDensity" src="tables/gt-density.html" width="450" height="600"  frameborder="0"&gt;
-
 ]
 
 ---
 
-### 10. Barplot
+### 10. Gráficos de Barras
 
-.pull-left[
-
-```r
-gt(bar_yields) %&gt;% 
-  gtExtras::gt_duplicate_column(
-    mean, dupe_name = "mean_plot") %&gt;% 
-  gtExtras::gt_plt_bar(
-    mean_plot, color = "lightblue",
-    width = 40, scale_type = "number") %&gt;% 
-  gtExtras::gt_theme_nytimes() %&gt;% 
-  cols_label(
-    mean = html("Average&lt;br&gt;2013-17"),
-    mean_plot = ""
-  )
-```
-
-
-]
-
---
-
-.pull-right[
+.center[
 &lt;iframe id="gtBar" src="tables/bar-plot.html" width="450" height="600"  frameborder="0"&gt;
-
 ]
 
 ---
 
-### 10. Bullet charts
+### 10. Gráficos *Bullet*
 
-There’s also an option to create [bullet charts](https://en.wikipedia.org/wiki/Bullet_graph) which represent a core value and a target metric.
-
+.center[
 &lt;iframe id="gtBullet" src="tables/gt-bullet.html" width="550" height="600"  frameborder="0"&gt;
+]
 
 ---
 
-### 10. Confidence Intervals
+### 10. Intervalos de Confiança
 
-You can also plot confidence intervals, either by providing your own values or a basic calculation internally.
-
+.center[
 &lt;iframe id="gtCI" src="tables/ci-table.html" width="550" height="600"  frameborder="0"&gt;
+]
 
 ---
 
-### 10. Point plot, recreation
+### 10. Gráficos de Pontos
 
+.center[
 &lt;iframe id="gtGerman" src="tables/german-election.html" width="1000" height="1000"  frameborder="0"&gt;
-
-
+]
 
 ---
 
-### 10. Heatmap
+### 10. *Heatmap*
 
-Lastly, you can add colors across the entire plot itself to show trends across the data over time and across country.
-
+.center[
 &lt;iframe id="gtHeatmap" src="tables/heatmap.html" width="600" height="600"  frameborder="0"&gt;
+]
 
 ---
 
-### 10 Guidelines for Better Tables
+### 10 Princípios Básicos para Melhores Tabelas
 
 .pull-left[
-#### 1. Offset the Heads from the Body  
-#### 2. Use Subtle Dividers over Heavy Grids  
-#### 3. Right-Align Numbers  
-#### 4. Left-Align Text  
-#### 5. Select Appropriate Precision  
+#### 1. Separe o Cabeçalho do Corpo da Tabela 
+#### 2. Use divisórias sutis em vez de linhas de grade pesadas 
+#### 3. Alinhe Números à Direita 
+#### 4. Alinhe Textos à Esquerda
+#### 5. Selecione o Nível Apropriado de Precisão nos Números 
 ]
 
 .pull-right[
-#### 6. Guide your Reader with Space between Rows and Columns  
-#### 7. Remove Unit Repetition  
-#### 8. Highlight Outliers  
-#### 9. Group Similar Data and Increase White Space  
-#### 10. Add Visualizations when Appropriate  
+#### 6. Guie seu Leitor com Espaços
+#### 7. Evite a Repetição de Unidade
+#### 8. Destaque Outliers
+#### 9. Agrupe Dados Similares e Aumente o Espaçamento 
+#### 10. Adicione Visualizações quando Apropriado
 ]
-
----
-
-# Resources
-
-* 7 Different Table Guides on [TheMockUp.blog](https://themockup.blog/#category:tables)  
-
-* ALL code for this specific presentation in written form in [this post](https://themockup.blog/posts/2020-09-04-10-table-rules-in-r/)  
-
-* `gt` [documentation](https://gt.rstudio.com/)  
-
-* Stephen Few's *Show Me the Numbers* book - excellent resource on tables/graphs  
-
-* The [`{gt}` Cookbook](https://themockup.blog/static/gt-cookbook.html)  
-
-* The [Advanced `{gt}` Cookbook](https://themockup.blog/static/gt-cookbook-advanced.html)  
-
-* [`{gtsummary}` R package](http://www.danieldsjoberg.com/gtsummary/)  
-
-* [`{gtExtras}` documentation](https://jthomasmock.github.io/gtExtras/index.html)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
